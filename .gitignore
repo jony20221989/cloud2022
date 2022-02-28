@@ -1,0 +1,4 @@
+# Project exclude paths
+/gateway/target/
+/gateway-provider/target/
+/.idea/

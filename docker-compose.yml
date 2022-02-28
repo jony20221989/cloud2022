@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  myredis:
+    container_name: redis
+    image: redis:6.2.6
+    restart: always
+    command: redis-server --requirepass 123456
+    ports:
+      - 6379:6379
+
+  mysql:
+    container_name: mysql8
+    image: mysql:8.0.21
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - 3306:3306
